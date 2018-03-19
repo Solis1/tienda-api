@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tiendita_db
+  pool: 2
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tiendita_db
+  username: postgres
+  pool: 2
