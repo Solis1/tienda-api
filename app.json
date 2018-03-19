@@ -1,0 +1,12 @@
+{
+  "name": "tienda-api",
+  "description": "A simple Sinatra REST API",
+  "keywords": ["sinatra", "api", "activerecord", "reminders"],
+  "repository": "https://github.com/Solis1/tienda-api",
+  "env": {
+    "RACK_ENV": "production"
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate && bundle exec rake db:seed"
+  }
+}
