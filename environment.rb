@@ -1,7 +1,7 @@
 configure :production, :development do
   set :show_exceptions, true
 
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://127.0.0.1/tiendita_db')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://127.0.0.1/tienda_rest_db')
 
   ActiveRecord::Base.establish_connection(
     adapter: 'postgresql',

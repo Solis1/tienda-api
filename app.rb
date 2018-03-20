@@ -38,9 +38,9 @@ post '/productos' do
 end
 
 delete '/productos/:id' do
-  producto = Producto.where(id: params['id'])
+  producto = Producto.where(id: params['id']).first
 
-  if producto.destroy_all
+  if producto.delete
     {success: "ok"}.to_json
   else
     halt 500
@@ -74,9 +74,9 @@ post '/users' do
 end
 
 delete '/users/:id' do
-  user = User.where(id: params['id'])
+  user = User.where(id: params['id']).first
 
-  if user.destroy_all
+  if user.destroy
     {success: "ok"}.to_json
   else
     halt 500
